@@ -1,6 +1,8 @@
 # Function to compare number of complete cases in monitor id
 # vs a min threshold. If >= threshold, compute correlation
 # between Nitrate and Sulfate readings for monitor id
+# Requries the use of complete.R found in the pollutant set
+# folder
 
 
 corr = function(directory, threshold = 0)
