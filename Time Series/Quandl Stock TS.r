@@ -2,7 +2,7 @@
 ## to the present. This function requires the use of the Quandl and ggplot2 packages                          ##
 ## Example: Time_Series("GOOG/NASDAQ_GOOGL")
 
-Time_Series = function(symbol)
+time_series = function(symbol)
 {
   # Download data set from Quandl
   data.series <- Quandl(symbol, start_date = "2005-01-01")[ , c(1, 5)] 
