@@ -19,15 +19,15 @@ corr = function(directory, threshold = 0)
     # If greater than threshold, compute correlation between
     # Nitrate and Sulfate readings
     for( i in 1:332)
+    {
+      if(comp_cases$nobs[i] >= threshold)
       {
-        if(comp_cases$nobs[i] >= threshold)
-          {
-            data = read.csv(dat[i])
-            cor_data = c(cor_data, cor(data[ ,"nitrate"], data[ , "sulfate"], 
-                                           use = "complete"))
-          }
-        
+        data = read.csv(dat[i])
+        cor_data = c(cor_data, cor(data[ ,"nitrate"], data[ , "sulfate"], 
+                      use = "complete"))
       }
+        
+    }
     # Return correlation data
     cor_data
   
