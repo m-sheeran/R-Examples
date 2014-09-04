@@ -8,7 +8,7 @@ Time_Series = function(symbol)
   data.series <- Quandl(symbol, start_date = "2005-01-01")[ , c(1, 5)] 
   
   # Apply initial layer using ggplot2
-  my.plot <- ggplot( data = data.series, aes(x = Date, y = Close)) + geom_line(color = "#FAB521")
+  my.plot <- ggplot(data = data.series, aes(x = Date, y = Close)) + geom_line(color = "#FAB521")
   
   # Apply theme for layer and specify element colors
   series.theme <- theme(panel.background = element_rect(fill = "#393939"), panel.grid.major.x = element_blank(), 
