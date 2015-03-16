@@ -1,6 +1,6 @@
 ## This function takes a Quandl code and generates a time series of closing stock prices from January 1, 2005 ##
 ## to the present. This function requires the use of the Quandl and ggplot2 packages                          ##
-## Example: Time_Series("GOOG/NASDAQ_GOOGL")
+## Example: time_series("GOOG/NASDAQ_GOOGL")
 
 time_series = function(symbol)
 {
